@@ -1,6 +1,115 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>mn.msc</groupId>
-  <artifactId>skull-stripping</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>mn.msc</groupId>
+	<artifactId>skull-stripping</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+
+	<!-- <parent> -->
+	<!-- <groupId>net.imagej</groupId> -->
+	<!-- <artifactId>pom-imagej</artifactId> -->
+	<!-- <version>7.0.0</version> -->
+	<!-- <relativePath /> -->
+	<!-- </parent> -->
+
+	<name>plugins/Skull_Stripping.jar</name>
+	<description>A Maven project implementing a skull stripping algorithm.</description>
+
+	<developers>
+		<developer>
+			<name>Marcin Niesciur</name>
+			<email>marcinnie7@gmail.com</email>
+			<roles>
+				<role>developer</role>
+			</roles>
+		</developer>
+	</developers>
+
+	<scm>
+		<connection>scm:git:git://github.com/niemar/skull-stripping</connection>
+		<developerConnection>scm:git:git@github.com:niemar/skull-stripping</developerConnection>
+		<tag>HEAD</tag>
+		<url>https://github.com/niemar/skull-stripping</url>
+	</scm>
+
+	<properties>
+		<main-class>SkullStripping</main-class>
+	</properties>
+
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-jar-plugin</artifactId>
+				<configuration>
+					<archive>
+						<manifest>
+							<mainClass>${main-class}</mainClass>
+						</manifest>
+					</archive>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+
+		</plugins>
+	</build>
+
+	<dependencies>
+		<dependency>
+			<groupId>net.imagej</groupId>
+			<artifactId>ij</artifactId>
+			<version>1.49v</version>
+		</dependency>
+
+		<!-- pluginow z neta -->
+		<!-- http://mvnrepository.com/artifact/com.jgoodies/binding -->
+		<dependency>
+			<groupId>com.jgoodies</groupId>
+			<artifactId>binding</artifactId>
+			<version>2.0.6</version>
+		</dependency>
+		<dependency>
+			<groupId>com.jgoodies</groupId>
+			<artifactId>jgoodies-common</artifactId>
+			<version>1.8.1</version>
+		</dependency>
+		<!-- http://mvnrepository.com/artifact/commons-beanutils/commons-beanutils -->
+		<dependency>
+			<groupId>commons-beanutils</groupId>
+			<artifactId>commons-beanutils</artifactId>
+			<version>1.9.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>net.sf.ij-plugins</groupId>
+			<artifactId>ijp-toolkit_2.10</artifactId>
+			<version>2.1.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.rendersnake</groupId>
+			<artifactId>rendersnake</artifactId>
+			<version>1.9.0</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>fr.inra.ijpb</groupId>
+			<artifactId>MorphoLibJ_</artifactId>
+			<version>1.2.2-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>de.biomedical-imaging.ij</groupId>
+			<artifactId>ij_blob</artifactId>
+			<version>1.4.7</version>
+		</dependency>
+	</dependencies>
+
 </project>
