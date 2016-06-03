@@ -20,7 +20,7 @@ public class MorphologicalOpsPlugin implements PlugInFilter {
 	@Override
 	public void run(ImageProcessor ip) {
 		ip.dilate();
-		ip.invert();
+		//ip.invert();
 	}
 
 	
