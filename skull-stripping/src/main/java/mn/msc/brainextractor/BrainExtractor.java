@@ -40,6 +40,6 @@ public class BrainExtractor implements PlugInFilter {
 		//cc.show();
 		ip.setIntArray(byteProc.getIntArray());
 
-		System.out.println();
+		//System.out.println();
 	}
 }
