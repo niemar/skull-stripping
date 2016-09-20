@@ -18,7 +18,7 @@ import net.sf.ij_plugins.clustering.KMeans2D;
 import net.sf.ij_plugins.clustering.KMeansConfig;
 
 /**
- * @author namer
+ * @author niemar
  *
  */
 public class KMeansPlugin implements PlugInFilter {

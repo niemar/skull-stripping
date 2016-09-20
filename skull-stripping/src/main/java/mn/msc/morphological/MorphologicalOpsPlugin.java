@@ -2,6 +2,7 @@ package mn.msc.morphological;
 
 import ij.ImagePlus;
 import ij.plugin.filter.PlugInFilter;
+import ij.process.ByteProcessor;
 import ij.process.ImageProcessor;
 
 /**
@@ -19,8 +20,9 @@ public class MorphologicalOpsPlugin implements PlugInFilter {
 
 	@Override
 	public void run(ImageProcessor ip) {
-		ip.dilate();
-		//ip.invert();
+		ByteProcessor byteProc = (ByteProcessor) ip;	
+		byteProc.erode(2, 0);
+		byteProc.dilate(2, 0);
 	}
 
 	
